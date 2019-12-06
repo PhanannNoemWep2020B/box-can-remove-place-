@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box{
+            width:100px;    
+            height: 100px;
+            background: green;
+            border: 1px solid #000;
+            transition: all ease-in 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <hr>
+    <button onclick="moveElementLeft()">Move Box to Left</button>
+    <button onclick="moveElementRight()">Move Box to Right</button>
+</body>
+<script>
+    var box = document.getElementById('box');
+    function moveElementRight(){
+        box.style="transition:all ease-in 0.5s;";
+        box.style="margin-left:92%;";
+        box.style.backgroundColor="red";
+        box.style.borderRadius="50%"
+    }
+    function moveElementLeft(){
+        box.style="transition:all ease-in 0.5s;";
+        box.style="margin:0;";
+        box.style.borderRadius="0"
+        box.style.backgroundColor="green";
+    }
+</script>
+</html>
